@@ -34,8 +34,7 @@ TARGET_CFLAGS += $(FPIC)
 define Package/sdk/install
 	$(INSTALL_DIR) $(1)/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/sdk $(1)/bin/
-	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/sdk.init $(1)/etc/init.d/sdk
+
 endef
 
 $(eval $(call BuildPackage,sdk))
